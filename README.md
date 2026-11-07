@@ -1,4 +1,6 @@
 # Multan Environmental Heat Screening
+**Reader guide:** [Project structure and report status](docs/PROJECT_GUIDE.md) · [Public portfolio](https://musab-shahid-earth-observation.brinycourt4.chatgpt.site/)
+
 
 **Earth observation · polygon-level GIS · model evaluation · reproducible Python**
 
@@ -12,6 +14,7 @@ This project connects satellite extraction, careful spatial joins, exploratory s
 
 | Resource | Purpose |
 |---|---|
+| [Research report](docs/REPORT.md) | Standalone narrative, results, figures and limitations |
 | [Executable analysis notebook](notebooks/Analysis.ipynb) | Reproduce the release from supplied CSV exports |
 | [Analysis script](src/analyze.py) | Data checks, screening, validation, figures and GeoJSON |
 | [Methods and limitations](docs/METHODS.md) | What the results support and what they do not |
