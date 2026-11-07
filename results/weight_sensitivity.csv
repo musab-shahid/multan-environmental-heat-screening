@@ -1,0 +1,4 @@
+scenario,top14_overlap,jaccard
+baseline,14,1.0
+thermal,13,0.8666666666666667
+vegetation,13,0.8666666666666667
