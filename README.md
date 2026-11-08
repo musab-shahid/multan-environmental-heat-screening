@@ -1,4 +1,6 @@
-# Multan Environmental Heat Screening
+# Spatiotemporal Urban Heat Vulnerability Assessment — Multan, Pakistan (2003–2023)
+
+*Exploratory environmental screening using Google Earth Engine, Colab and machine learning*
 **Reader guide:** [Project structure and report status](docs/PROJECT_GUIDE.md) · [Public portfolio](https://musab-shahid-earth-observation.brinycourt4.chatgpt.site/)
 
 
@@ -8,7 +10,7 @@ An exploratory study by **Musab Shahid** of land-surface temperature, vegetation
 
 ![Relative screening maps](figures/relative_screening_maps.png)
 
-This project connects satellite extraction, careful spatial joins, exploratory screening and honest out-of-sample model evaluation. It follows the earlier [Multan UHI project](https://github.com/musab-shahid/multan-uhi-analysis), with a different district-wide polygon framework and validation emphasis.
+This project connects satellite extraction, careful spatial joins, exploratory screening and honest out-of-sample model evaluation. It follows the earlier [Spatiotemporal Analysis of Urban Heat Island Effect in Multan, Pakistan (2013–2023) project](https://github.com/musab-shahid/multan-uhi-analysis), with a different district-wide polygon framework and validation emphasis.
 
 ## Explore
 
@@ -61,6 +63,6 @@ The supplied data are user-generated Earth Engine exports from Landsat Collectio
 
 ## Related research
 
-[Multan UHI](https://github.com/musab-shahid/multan-uhi-analysis) · [ERA5 monsoon — collaborative study](https://github.com/musab-shahid/multan-era5-monsoon-analysis) · [South Punjab drought](https://github.com/musab-shahid/south-punjab-drought-analysis)
+[Spatiotemporal Analysis of Urban Heat Island Effect in Multan, Pakistan (2013–2023)](https://github.com/musab-shahid/multan-uhi-analysis) · [ERA5 monsoon — collaborative study](https://github.com/musab-shahid/multan-era5-monsoon-analysis) · [Drought Event Analysis in South Punjab, Pakistan](https://github.com/musab-shahid/south-punjab-drought-analysis)
 
-Suggested citation: Shahid, M. (2026). *Multan Environmental Heat Screening: exploratory polygon-level analysis and validation audit*. Research portfolio release.
+Suggested citation: Shahid, M. (2026). *Spatiotemporal Urban Heat Vulnerability Assessment — Multan, Pakistan (2003–2023): exploratory polygon-level analysis and validation audit*. Research portfolio release.

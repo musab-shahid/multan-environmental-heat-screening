@@ -1,4 +1,4 @@
-# Multan Environmental Heat Screening
+# Spatiotemporal Urban Heat Vulnerability Assessment — Multan, Pakistan (2003–2023)
 
 
 Exploratory research report | Musab Shahid | 7 November 2026
@@ -118,4 +118,4 @@ Primary evidence: repository data/ CSVs, results/ tables, src/analyze.py, and do
 
 <link href="https://github.com/musab-shahid/multan-environmental-heat-screening" color="#146548">Repository: github.com/musab-shahid/multan-environmental-heat-screening</link>
 
-Suggested citation: Shahid, M. (2026). Multan Environmental Heat Screening: exploratory polygon-level analysis and validation audit. Research portfolio report, 7 November 2026.
+Suggested citation: Shahid, M. (2026). Spatiotemporal Urban Heat Vulnerability Assessment — Multan, Pakistan (2003–2023): exploratory polygon-level analysis and validation audit. Research portfolio report, 7 November 2026.
