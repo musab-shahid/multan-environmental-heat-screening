@@ -1,0 +1,59 @@
+{
+  "qgis_version": "3.40.3-Bratislava",
+  "layers": [
+    {
+      "year": 2003,
+      "features": 88,
+      "unique_source_ids": 88,
+      "classes": {
+        "Lower": 23,
+        "Middle": 44,
+        "Higher": 21
+      }
+    },
+    {
+      "year": 2008,
+      "features": 88,
+      "unique_source_ids": 88,
+      "classes": {
+        "Lower": 28,
+        "Middle": 31,
+        "Higher": 29
+      }
+    },
+    {
+      "year": 2013,
+      "features": 88,
+      "unique_source_ids": 88,
+      "classes": {
+        "Lower": 24,
+        "Middle": 41,
+        "Higher": 23
+      }
+    },
+    {
+      "year": 2018,
+      "features": 88,
+      "unique_source_ids": 88,
+      "classes": {
+        "Lower": 27,
+        "Middle": 37,
+        "Higher": 24
+      }
+    },
+    {
+      "year": 2023,
+      "features": 88,
+      "unique_source_ids": 88,
+      "classes": {
+        "Lower": 29,
+        "Middle": 32,
+        "Higher": 27
+      }
+    }
+  ],
+  "data_crs": "EPSG:4326",
+  "display_crs": "EPSG:32642",
+  "paths": "relative",
+  "classification_field": "RELATIVE_CLASS"
+}

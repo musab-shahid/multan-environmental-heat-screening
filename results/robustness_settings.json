@@ -1,0 +1,20 @@
+{
+  "seed": 42,
+  "spatial_blocks": 5,
+  "buffers_km": [
+    0,
+    2,
+    5
+  ],
+  "coordinate_crs": "EPSG:32642",
+  "block_assignment": "KMeans on dissolved council centroids; no response values used",
+  "distance": "Minimum distance between complete training council and test council geometries",
+  "weight_grid_step": 0.1,
+  "weight_scenarios_per_year": 66,
+  "top_k": 14,
+  "scenario_interpretation": "Deliberate stress-test grid, not a probability distribution",
+  "input_sha256": {
+    "data\\earth_engine_polygon_statistics.csv": "c7a29adf103a37082e356e021abbeb4b2e9602032559ee304631763011ed69de",
+    "data\\legacy_model_results.csv": "2883c95815635b108db69f35bdd6868f5154c13646147a43c60f05ef24587283"
+  }
+}

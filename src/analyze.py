@@ -11,7 +11,7 @@ from sklearn.dummy import DummyRegressor
 from sklearn.model_selection import GroupKFold,LeaveOneGroupOut
 from sklearn.metrics import accuracy_score,balanced_accuracy_score,mean_absolute_error,r2_score
 import sklearn
-ROOT=Path.cwd()
+ROOT=Path(__file__).resolve().parents[1]
 raw=pd.read_csv(ROOT/'data/earth_engine_polygon_statistics.csv')
 old=pd.read_csv(ROOT/'data/legacy_model_results.csv')
 keys=['YEAR','UC_C','WARD_NAME','Shape_Area','Shape_Leng']

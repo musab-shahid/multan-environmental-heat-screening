@@ -16,13 +16,16 @@ This project connects satellite extraction, careful spatial joins, exploratory s
 
 | Resource | Purpose |
 |---|---|
-| [Research report](docs/REPORT.md) | Standalone narrative, results, figures and limitations |
+| [Research report (PDF)](docs/REPORT.pdf) | Standalone narrative, results, figures and limitations |
 | [Executable analysis notebook](notebooks/Analysis.ipynb) | Reproduce the release from supplied CSV exports |
 | [Analysis script](src/analyze.py) | Data checks, screening, validation, figures and GeoJSON |
 | [Methods and limitations](docs/METHODS.md) | What the results support and what they do not |
 | [Review of earlier experiments](docs/REVIEW.md) | Why earlier calibration and health-risk claims were retired |
 | [Results](results/) | Tables, validation metrics and environment record |
-| [Year-specific map layers](maps/) | Verified polygon identities; open in QGIS |
+| [GIS package](gis/Multan_Heat_Screening_GIS.zip) | Portable QGIS project, five GeoPackage layers and matching styles |
+| [Map book](gis/Multan_Heat_Screening_Map_Book.pdf) | Five finished yearly map layouts |
+| [Spatial and weight robustness](docs/ROBUSTNESS.md) | Buffered geographic evaluation and 66 scenarios per year |
+| [Year-specific GeoJSON layers](maps/) | Separate layers with verified polygon identities |
 | [Drive research archive](https://drive.google.com/drive/folders/1J7LbZQI04QIAeuQi4SkdS5KcJzGQ4ePA) | Preserved notebooks, source exports and raster files; access may be restricted |
 
 ## Scope and findings
@@ -32,7 +35,8 @@ This project connects satellite extraction, careful spatial joins, exploratory s
 - The new screening score ranks polygons **within each year** using LST (50%), NDBI (30%) and vegetation deficit (20%). These are proposed exploratory weights, not literature-calibrated health thresholds.
 - In a separate LST regression experiment, Random Forest's mean fold MAE was **2.42°C** for held-out council groups versus **3.22°C** for the mean baseline. For held-out years, RF was worse: **4.42°C** versus **3.68°C**. Temporal generalization is weak.
 - The legacy RF reproduced its constructed classes with approximately **86.65%** mean grouped accuracy in this local rerun. The preceding Colab run reported 86.37%; library versions differ and this is not independent vulnerability validation.
-- Two alternative additive weight settings each retained **13 of the baseline top 14** screening polygons in 2023. This is limited scenario sensitivity, not robust policy validation.
+- New geographic-block evaluation with a **5 km exclusion buffer** gives RF mean fold MAE **2.99°C**, versus **3.44°C** for the baseline. Performance varies by block; mean fold R² is −0.18.
+- Across **66 weight scenarios per year**, top-14 overlap with the baseline ranges from **10 to 14 polygons** across all years and scenarios. Selection frequencies describe this grid, not probabilities of vulnerability.
 
 ![Observed associations by year](figures/lst_savi_by_year.png)
 
@@ -45,15 +49,21 @@ From the repository root, with Python 3:
 ```sh
 python -m pip install -r requirements.txt
 python src/analyze.py
+python src/robustness.py
+python -m unittest discover -s tests -v
 ```
 
 Or open `notebooks/Analysis.ipynb` after cloning the repository. No Earth Engine authentication or new satellite download is required for this release analysis. The exact tested versions are recorded in [results/environment.json](results/environment.json).
 
 The script checks one-to-one polygon-year joins and geometry stability, creates all results and figures, and exports separate GeoJSON files for every year. It writes only generated release outputs.
 
+## Current release
+
+The executed notebook runs both scientific stages. Six tests pass. The seven-page research report and five-page map book include the new results; the QGIS project was tested after relocation. [Release notes](docs/RELEASE_NOTES.md) describe the scope. Original exports and historical analyses remain preserved.
+
 ## Interpretation boundaries
 
-LST is satellite-observed **surface temperature**, not air temperature or a health outcome. Different seasonal windows, sensors and observation coverage prevent a calibrated long-term temperature-trend claim. The relative screening maps compare locations within a year; their colors do not demonstrate cooling or warming between years. No socioeconomic or clinical vulnerability has been validated. Council-group holdout is not spatially buffered validation.
+LST is satellite-observed **surface temperature**, not air temperature or a health outcome. Different seasonal windows, sensors and observation coverage prevent a calibrated long-term temperature-trend claim. The relative screening maps compare locations within a year; their colors do not demonstrate cooling or warming between years. No socioeconomic or clinical vulnerability has been validated. The original council-group holdout is complemented by explicit geographic blocks with 0, 2 and 5 km buffers; neither demonstrates reliable transfer to an unseen year.
 
 This is a completed **exploratory portfolio release**, not a validated operational heat-health tool or peer-reviewed publication. Further primary-data work would be needed for those claims.
 
@@ -66,3 +76,4 @@ The supplied data are user-generated Earth Engine exports from Landsat Collectio
 [Spatiotemporal Analysis of Urban Heat Island Effect in Multan, Pakistan (2013–2023)](https://github.com/musab-shahid/multan-uhi-analysis) · [ERA5 monsoon — collaborative study](https://github.com/musab-shahid/multan-era5-monsoon-analysis) · [Drought Event Analysis in South Punjab, Pakistan](https://github.com/musab-shahid/south-punjab-drought-analysis)
 
 Suggested citation: Shahid, M. (2026). *Spatiotemporal Urban Heat Vulnerability Assessment — Multan, Pakistan (2003–2023): exploratory polygon-level analysis and validation audit*. Research portfolio release.
+

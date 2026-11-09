@@ -1,32 +1,5 @@
-# Spatiotemporal Urban Heat Vulnerability Assessment — Multan, Pakistan (2003–2023): reader and archive guide
+# Spatiotemporal Urban Heat Vulnerability Assessment — Multan, Pakistan (2003–2023)
 
-Reviewed 7 November 2026.
+Start with the [seven-page report](REPORT.pdf), [map book](../gis/Multan_Heat_Screening_Map_Book.pdf), and [portable QGIS package](../gis/Multan_Heat_Screening_GIS.zip). The [executed notebook](../notebooks/Analysis.ipynb) runs the base analysis and new robustness stage.
 
-## Read in this order
-
-1. [Project overview](../README.md).
-2. [Research report](../docs/REPORT.md).
-3. [Execution or methods guide](METHODS.md).
-4. Inspect the notebook and supporting outputs before reusing numerical claims.
-
-## Report status
-
-The November 2026 report summarizes the executed release analysis. It is exploratory environmental screening, not health-risk validation. Original experiments remain preserved separately.
-
-## Repository layout
-
-`data/` contains the supplied source tables; `src/analyze.py` and `notebooks/Analysis.ipynb` reproduce the release; `results/`, `figures/` and `maps/` hold generated outputs; `docs/` contains the report, methods and audit.
-
-Maps already carry verified attributes. Open one year at a time and use SOURCE_ID, not name-only joins.
-
-## Drive organization
-
-- [Project archive](https://drive.google.com/drive/folders/1J7LbZQI04QIAeuQi4SkdS5KcJzGQ4ePA) holds original working files.
-- [Curated project folder](https://drive.google.com/drive/folders/15sMsQDcKxnvy9Dm0OGtngaBSclrl_nqv) contains a report copy and navigation guide.
-- [Central project index](https://drive.google.com/drive/folders/1dE5bU7ok7c8q_XpAfkATpt4wYOsNZH2E) links all four studies. Drive access may be restricted.
-
-The index is a navigation layer. Existing source folder names and IDs are preserved; no permission changes or data-path migration are implied. Report copies are snapshots, not synchronized mirrors. Original documents and live code remain the source of truth for their respective versions.
-
-## Review boundaries
-
-This organization pass checks files, links and documentation. It does not establish a new scientific replication, peer review or institutional endorsement. Follow the specific methodological qualifications in the README and report.
+[Methods](ROBUSTNESS.md) document geographic separation and all-year weighting scenarios. [Release notes](RELEASE_NOTES.md) record the changes and tests. Original input CSVs remain in data/; current results are in results/. Historical notebooks and RF maps remain in the Drive archive.

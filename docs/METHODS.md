@@ -18,3 +18,8 @@ The separate regression experiment predicts original LST from SAVI and NDBI. Fiv
 
 ## Sensitivity
 The additive rank formulation remains fixed. Compare baseline weights (.5,.3,.2), thermal emphasis (.7,.2,.1), and vegetation emphasis (.4,.2,.4). Compare overlap/Jaccard for the top 14 polygons in 2023, tie-broken by SOURCE_ID. These scenarios do not validate causality or optimal intervention priorities.
+
+
+## November spatial and weight analyses
+
+The current release adds geographic block holdout with polygon-edge exclusion buffers and an all-year 66-scenario weight grid. The earlier council-group evaluation remains a separate experiment. Full design, settings, results and limits: [Spatial and weighting methods](ROBUSTNESS.md).
